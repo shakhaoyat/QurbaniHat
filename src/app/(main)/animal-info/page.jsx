@@ -1,13 +1,11 @@
-
 import React from 'react';
 
-const layout = ({ children }) => {
+const page = () => {
       return (
             <div>
-
-                  {children}
+                  here will be animal info page
             </div>
       );
 };
 
-export default layout;
+export default page;
