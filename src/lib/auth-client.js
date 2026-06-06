@@ -1,13 +1,7 @@
-await authClient.signIn.email({
-      email: "email@example.com",
-      password: "password"
-}, {
-      onError: (ctx) => {
-            // Handle the error
-            if (ctx.error.status === 403) {
-                  alert("Please verify your email address")
-            }
-            //you can also show the original error message
-            alert(ctx.error.message)
-      }
-})
+import { createAuthClient } from "better-auth/react";
+export const authClient = createAuthClient({
+      /** The base URL of the server (optional if you're using the same domain) */
+      baseURL: process.env.BETTER_AUTH_URL,
+});
+
+export const { signIn, signUp, useSession } = createAuthClient();
