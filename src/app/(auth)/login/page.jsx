@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
       const handleGoogleSignin = async () => {
@@ -36,12 +37,12 @@ const LoginPage = () => {
             console.log(res, error);
 
             if (error) {
-                  alert(error.message);
+                  toast.error(error.message || "Signin failed");
+                  return;
             }
 
-
             if (res) {
-                  alert("Signin successful");
+                  toast.success("Signin successful");
             }
       };
 

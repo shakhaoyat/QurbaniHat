@@ -2,6 +2,8 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
@@ -13,6 +15,8 @@ const RegisterPage = () => {
 
             console.log(data, "data");
       };
+      const router = useRouter();
+
       const {
             register,
             handleSubmit,
@@ -37,11 +41,13 @@ const RegisterPage = () => {
 
             console.log(res, error);
             if (error) {
-                  alert(error.message);
+                  toast.error(error.message || "Signup failed");
+                  return;
             }
 
             if (res) {
-                  alert("Signup successful");
+                  toast.success("Signup successful");
+                  router.push("/");
             }
       };
 
