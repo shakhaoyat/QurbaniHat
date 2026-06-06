@@ -56,9 +56,9 @@ const AllAnimalsPage = () => {
                                           <Image
                                                 src={animal.image || '/logo.png'}
                                                 alt={animal.name || 'animal'}
-                                                width={600}
-                                                height={350}
-                                                className="w-full h-full object-cover"
+                                                width={400}
+                                                height={250}
+                                                className="w-full h-full "
                                           />
                                     </figure>
                                     <div className="card-body">

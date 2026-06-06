@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getData } from '@/lib/data';
+import Marquee from "react-fast-marquee";
 
 const tips = [
       'Check animal health certificates before buying.',
@@ -43,7 +44,7 @@ const Hero = async () => {
                               {animals.length ? animals.map((animal) => (
                                     <div key={animal._id || animal.id || animal.name} className="card bg-base-100 shadow">
                                           <figure className="h-40 w-full overflow-hidden">
-                                                <Image src={animal.image || '/logo.png'} alt={animal.name || 'animal'} width={400} height={240} className="w-full h-full object-cover" />
+                                                <Image src={animal.image || '/logo.png'} alt={animal.name || 'animal'} width={400} height={240} className="w-full h-full " />
                                           </figure>
                                           <div className="card-body">
                                                 <h3 className="card-title">{animal.name || 'Unnamed'}</h3>
@@ -64,7 +65,10 @@ const Hero = async () => {
                         <div className="card bg-base-100 shadow p-6">
                               <h3 className="text-xl font-semibold mb-3">Qurbani Tips</h3>
                               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                                    {tips.map((tip, i) => <li key={i}>{tip}</li>)}
+
+                                    <Marquee pauseOnHover={true} gradient={false} speed={50}>
+                                          {tips.map((tip, i) => <li key={i}>{tip}</li>)}
+                                    </Marquee>
                               </ul>
                         </div>
                         <div className="card bg-base-100 shadow p-6">
