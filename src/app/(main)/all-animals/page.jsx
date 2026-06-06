@@ -68,7 +68,7 @@ const AllAnimalsPage = () => {
                                           <p>Location: {animal.location || 'N/A'}</p>
                                           <p className="font-semibold">Price: ৳{animal.price ?? 'N/A'}</p>
                                           <div className="card-actions justify-end">
-                                                <Link href={`/all-animals/${animal.id || animal._id}`} className="btn btn-primary btn-sm">
+                                                <Link href={`/all-animals/${animal.id || animal._id}`} className="btn btn-primary btn-sm bg-amber-500">
                                                       Details
                                                 </Link>
                                           </div>

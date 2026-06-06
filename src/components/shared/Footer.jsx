@@ -3,8 +3,8 @@ import React from 'react';
 
 const Footer = () => {
       return (
-            <div className="container mx-auto">
-                  <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+            <div className="container mx-auto ">
+                  <footer className="footer sm:footer-horizontal bg-green-300 text-base-content p-10">
                         <aside>
                               <Image
                                     width={40}

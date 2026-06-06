@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getData } from '@/lib/data';
 import Marquee from "react-fast-marquee";
+import CowAnimation from '@/components/CowAnimation';
 
 const tips = [
       'Check animal health certificates before buying.',
@@ -23,16 +24,16 @@ const Hero = async () => {
 
       return (
             <section className="space-y-12">
-                  <div className="hero bg-base-200 py-16">
+                  <div className="hero bg-warning py-16 container mx-auto rounded-lg">
                         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
                               <div className="flex-1">
-                                    <h1 className="text-4xl font-bold">Find the best Qurbani animals near you</h1>
+                                    <h1 className="text-6xl font-bold">Find the best Qurbani animals near you</h1>
                                     <p className="py-4 text-lg text-muted-foreground">Browse trusted sellers, compare prices, and get tips to choose the right animal for Qurbani.</p>
                                     <Link href="/all-animals" className="btn btn-primary">Browse Animals</Link>
                               </div>
                               <div className="flex-1">
-                                    <div className="rounded-lg overflow-hidden shadow-lg">
-                                          <Image src={'/logo.png'} alt="banner" width={700} height={420} className="object-cover" />
+                                    <div className="rounded-lg overflow-hidden shadow-lg bg-green-200">
+                                          <CowAnimation className="h-full w-full" />
                                     </div>
                               </div>
                         </div>
@@ -51,7 +52,7 @@ const Hero = async () => {
                                                 <p className="text-sm text-muted-foreground">Price: {animal.price || 'N/A'}</p>
                                                 <div className="card-actions justify-end">
                                                       <Link href={`/all-animals/${animal._id || animal.id}`}
-                                                            className="btn btn-sm">View</Link>
+                                                            className="btn btn-sm bg-amber-400">View</Link>
                                                 </div>
                                           </div>
                                     </div>
@@ -61,8 +62,8 @@ const Hero = async () => {
                         </div>
                   </div>
 
-                  <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div className="card bg-base-100 shadow p-6">
+                  <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+                        <div className="card bg-yellow-100 shadow p-6">
                               <h3 className="text-xl font-semibold mb-3">Qurbani Tips</h3>
                               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
 
