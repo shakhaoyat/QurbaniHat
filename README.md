@@ -1,3 +1,50 @@
+# QurbaniHat
+
+Purpose
+-------
+QurbaniHat is a Next.js app for browsing and booking Qurbani (sacrificial) animals from trusted sellers. It provides user authentication, profile management, animal listings, and a simple booking flow.
+
+Live
+----
+https://qurbani-hat-gilt.vercel.app/
+
+Key Features
+------------
+- Browse featured and full animal listings
+- Email/password registration and login (Better Auth)
+- Social login (Google) via Better Auth
+- Session-aware navbar and profile page with update flow (name & photo)
+- Booking form on animal detail pages (client-side submit + success toasts)
+- Toast notifications (`react-toastify`)
+- UI built with Tailwind CSS + DaisyUI components
+- Lottie animation in the Hero component
+
+Notable npm packages used
+-------------------------
+- `next`, `react`, `react-dom`
+- `better-auth`, `@better-auth/mongo-adapter`
+- `mongodb`
+- `react-hook-form`
+- `react-toastify`
+- `lottie-react`
+- `react-fast-marquee`
+- `tailwindcss`, `daisyui`, `postcss`, `autoprefixer`
+
+Quick start
+-----------
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run development server:
+
+```bash
+npm run dev
+```
+
+See `package.json` for available scripts.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

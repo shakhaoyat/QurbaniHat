@@ -152,7 +152,7 @@ const BookingForm = ({ animalName }) => {
                               </label>
 
                               <div className="card-actions justify-end pt-2">
-                                    <button className="btn btn-primary w-full" type="submit">
+                                    <button className="btn btn-primary w-full bg-amber-500" type="submit">
                                           Booking Submit
                                     </button>
                               </div>
